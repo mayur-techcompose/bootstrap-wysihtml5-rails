@@ -704,12 +704,16 @@ var wysihtml5 = {
         }
 
         function getIframeDocument(iframeEl) {
-            if (typeof iframeEl.contentDocument != UNDEF) {
-                return iframeEl.contentDocument;
-            } else if (typeof iframeEl.contentWindow != UNDEF) {
-                return iframeEl.contentWindow.document;
-            } else {
-                throw module.createError("getIframeDocument: No Document object found for iframe element");
+            try{
+                if (typeof iframeEl.contentDocument != UNDEF) {
+                    return iframeEl.contentDocument;
+                } else if (typeof iframeEl.contentWindow != UNDEF) {
+                    return iframeEl.contentWindow.document;
+                } else {
+                    throw module.createError("getIframeDocument: No Document object found for iframe element");
+                }
+            } catch(err){
+
             }
         }
 
