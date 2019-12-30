@@ -36,8 +36,6 @@ def copy_javascript
   `cp #{BASE_FOLDER}/commands.js vendor/assets/javascripts/bootstrap-wysihtml5/commands.js`
   `cp #{WYSIHTMLX}/wysihtml5x-toolbar.js vendor/assets/javascripts/bootstrap-wysihtml5/wysihtml5x-toolbar.js`
   `cp #{HANDLEBARS}/handlebars.runtime.min.js vendor/assets/javascripts/bootstrap-wysihtml5/handlebars.runtime.min.js`
-
-  `cp #{BASE_FOLDER}/bootstrap3-wysihtml5.all.min.js vendor/assets/javascripts/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js`
 end
 
 def copy_css
